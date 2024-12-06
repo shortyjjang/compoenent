@@ -1,14 +1,14 @@
 export const getLists = async (params: {
-    page: number,
-    size: number,
-    keyword: string,
-    modelCode: string,
-    keywordType: string,
+  page: number;
+  size: number;
+  keyword: string;
+  modelCode: string;
+  keywordType: string;
 }) => {
-    let body: string = "";
+  let body: string = "";
   Object.keys(params).forEach((key, index) => {
     body += `${index === 0 ? "?" : "&"}${key}=${
-      key === "page" ? params.page + 1 : params[key as keyof typeof params]
+      params[key as keyof typeof params]
     }`;
   });
   try {

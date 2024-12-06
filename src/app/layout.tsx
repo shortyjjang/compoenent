@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Sans_KR } from "next/font/google";
 import "@/assets/css/globals.css";
-import { LayoutProvider } from "@/globals/Layout";
+import { LayoutProvider } from "@/hooks/useLayout";
 
 const notoSansKR = Noto_Sans_KR({
   subsets: ["latin"],

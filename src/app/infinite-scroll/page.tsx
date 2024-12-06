@@ -22,7 +22,10 @@ export default function InfiniteScrollPage() {
       keywordType: "user",
     };
     try {
-      const data: ResponseType | null = await getLists(params);
+      const data: ResponseType | null = await getLists({
+        ...params,
+        page: params.page + 1,
+      });
       if (!data) return;
       setLists(currentPage === 0 ? data.content : [...lists, ...data.content]);
       setCurrentPage(data.page_number + 1);
@@ -60,7 +63,6 @@ export default function InfiniteScrollPage() {
     </div>
   );
 }
-
 
 const code = `<InfiniteScroll
     onLoadData={getLists}

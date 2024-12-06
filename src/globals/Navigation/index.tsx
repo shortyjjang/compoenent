@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation';
 import React from 'react'
-import { useLayout } from '@/globals/Layout';
+import { useLayout } from '@/hooks/useLayout';
 import { navItems } from './navItems';
 
 export default function Navigation() {
