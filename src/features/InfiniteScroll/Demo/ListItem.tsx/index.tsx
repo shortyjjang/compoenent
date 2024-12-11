@@ -72,3 +72,5 @@ export default function ListItem({ item }: { item: ListItemType }) {
     </div>
   );
 }
+
+ListItem.displayName = "ListItem";

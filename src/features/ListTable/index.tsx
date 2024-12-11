@@ -11,3 +11,5 @@ export default function ListTable() {
     </ListTableProvider>
   )
 }
+
+ListTable.displayName = "ListTable";

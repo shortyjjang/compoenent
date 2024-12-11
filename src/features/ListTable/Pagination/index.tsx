@@ -100,3 +100,5 @@ export default function Pagination({
     </div>
   );
 }
+
+Pagination.displayName = "Pagination";

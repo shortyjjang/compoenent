@@ -47,3 +47,5 @@ export default function ListBody() {
     </div>
   );
 }
+
+ListBody.displayName = "ListBody";

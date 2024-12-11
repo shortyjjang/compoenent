@@ -1,8 +1,8 @@
 
 export const navItems = [
     {
-        name: 'Input',
-        path: '/input'
+        name: 'Form',
+        path: '/form'
     },
     {
         name: 'Infinite Scroll',
