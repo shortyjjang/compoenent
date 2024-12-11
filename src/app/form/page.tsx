@@ -2,11 +2,15 @@
 import AutoComplete from "@/entites/AutoComplete";
 import { Input } from "@/entites/Input";
 import Select from "@/entites/Select";
+import Switch from "@/entites/Switch";
 import React, { useState } from "react";
+import Checkbox from "@/entites/Checkbox";
+import Radiobox from "@/entites/Radiobox";
 
 export default function InputPage() {
   const [value, setValue] = useState("");
   const [value2, setValue2] = useState([]);
+  const [bool, setBool] = useState(false);
   return (
     <div className="flex flex-col gap-1 p-8">
       <h2 className="font-bold">Input</h2>
@@ -30,6 +34,14 @@ export default function InputPage() {
         value={value}
         onChange={(value) => setValue(value)}
       />
+      <h2 className="font-bold pt-4">Switch</h2>
+      <Switch checked={bool} onChange={(value) => setBool(value)} />
+      <h2 className="font-bold pt-4">Checkbox</h2>
+      <Checkbox checked={bool} onChange={(value) => setBool(value)} />
+      <h2 className="font-bold pt-4">Checkbox Rounded</h2>
+      <Checkbox checked={bool} onChange={(value) => setBool(value)} rounded />
+      <h2 className="font-bold pt-4">Radiobox</h2>
+      <Radiobox checked={bool} onChange={(value) => setBool(value)} />
     </div>
   );
 }
