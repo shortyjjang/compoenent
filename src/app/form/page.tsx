@@ -6,6 +6,7 @@ import Switch from "@/entites/Switch";
 import React, { useState } from "react";
 import Checkbox from "@/entites/Checkbox";
 import Radiobox from "@/entites/Radiobox";
+import TextArea from "@/entites/TextArea";
 
 export default function InputPage() {
   const [value, setValue] = useState("");
@@ -42,6 +43,10 @@ export default function InputPage() {
       <Checkbox checked={bool} onChange={(value) => setBool(value)} rounded />
       <h2 className="font-bold pt-4">Radiobox</h2>
       <Radiobox checked={bool} onChange={(value) => setBool(value)} />
+      <h2 className="font-bold pt-4">Textarea</h2>
+      <TextArea value={value} scrollHeight={100} onChange={(e) => setValue(e.target.value)} />
+      <h2 className="font-bold pt-4">Textarea increase height</h2>
+      <TextArea value={value} onChange={(e) => setValue(e.target.value)} />
     </div>
   );
 }

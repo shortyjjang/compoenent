@@ -1,6 +1,5 @@
 import { collapseTailwindClassName } from "@/utill/collapseTailwindClassName";
 import { forwardRef, useId } from "react";
-import IconCheck from "../icons/IconCheck";
 
 export interface CheckboxProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "onChange"> {
